@@ -6,7 +6,7 @@ import styles from "./PageLayout.module.css";
 export default function PageLayout({ children, onTabChanged }) {
   return (
     <Layout>
-      <Header onTabChanged={onTabChanged}/>
+      <Header onTabChanged={onTabChanged} />
       <div className={styles.box}></div>
       <Layout.Content className={styles.siteLayout}>
         <div
