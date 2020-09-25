@@ -1,5 +1,5 @@
 import { Form, Input, InputNumber, Button, Select } from "antd";
-import styles from "./AddPup.module.css";
+import styles from "./AddPet.module.css";
 
 const layout = {
   labelCol: {
@@ -16,7 +16,7 @@ const tailLayout = {
   },
 };
 
-export default function AddPup() {
+export default function AddPet() {
   const [form] = Form.useForm();
 
   const onFinish = async (pet) => {
@@ -35,7 +35,7 @@ export default function AddPup() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/pets/add",
+        "http://puppr-india.herokuapp.com/api/pets/add",
         requestOptions
       );
       if (response.status == 200) {
@@ -116,5 +116,3 @@ export default function AddPup() {
     </Form>
   );
 }
-
-export async function getStaticProps() {}

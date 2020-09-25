@@ -1,12 +1,12 @@
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import { Layout } from "antd";
 import styles from "./PageLayout.module.css";
 
-export default function PageLayout({ children }) {
+export default function PageLayout({ children, onTabChanged }) {
   return (
     <Layout>
-      <Header />
+      <Header onTabChanged={onTabChanged}/>
       <div className={styles.box}></div>
       <Layout.Content className={styles.siteLayout}>
         <div
