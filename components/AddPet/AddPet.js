@@ -35,7 +35,7 @@ export default function AddPet() {
 
     try {
       const response = await fetch(
-        "http://puppr-india.herokuapp.com/api/pets/add",
+        "https://puppr-india.herokuapp.com/api/pets/add",
         requestOptions
       );
       if (response.status == 200) {
